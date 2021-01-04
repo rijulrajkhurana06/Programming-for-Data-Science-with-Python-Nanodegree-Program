@@ -17,8 +17,7 @@ def get_filters():
     """
 
     print('\nHello! Let\'s explore some US bikeshare data!')
-    # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
-
+    # TO DO: get user input for city (chicago, new york city, washington).
 
     while True:
       city = input("\nWhich city would you like to filter by? Chicago, New York City or Washington?\n")
@@ -39,10 +38,11 @@ def get_filters():
       else:
         break
 
-    # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
+    # TO DO: get user input for day of week (all, monday, tuesday, ... sunday) 
 
     while True:
       day = input("\nAre you looking for a particular day? If so, kindly enter the day as follows: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday or type 'all' if you do not have any preference.\n")
+    
       if day not in ('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'all'):
         print("Sorry, I didn't catch that. Try again.")
         continue
@@ -102,13 +102,10 @@ def time_stats(df):
     popular_month = df['month'].mode()[0]
     print('Most Common Month:', popular_month)
 
-
     # TO DO: display the most common day of week
 
     popular_day = df['day_of_week'].mode()[0]
     print('Most Common day:', popular_day)
-
-
 
     # TO DO: display the most common start hour
 
@@ -127,17 +124,16 @@ def station_stats(df):
     print('\nCalculating The Most Popular Stations and Trip...\n')
     start_time = time.time()
 
-    # TO DO: display most commonly used start station
+    # TO DO: display most commonly used start station from the data.
 
     Start_Station = df['Start Station'].value_counts().idxmax()
     print('Most Commonly used start station:', Start_Station)
 
 
-    # TO DO: display most commonly used end station
+    # TO DO: display most commonly used end station from the userdata.
 
     End_Station = df['End Station'].value_counts().idxmax()
     print('\nMost Commonly used end station:', End_Station)
-
 
     # TO DO: display most frequent combination of start station and end station trip
 
@@ -240,13 +236,13 @@ def main():
         
         while True:
         
-            view_raw_data = input('\nWould you like to view first five row of raw data? Enter yes or no.\n')
+            view_raw_data = input('\n Would you like to view first five row of raw data? Enter yes or no.\n')
             if view_raw_data.lower() != 'yes':
                 break
             display_raw_data(df)
             break
 
-        restart = input('\nWould you like to restart? Enter yes or no.\n')
+        restart = input('\n Would you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
 
