@@ -53,6 +53,9 @@ earliest, most recent, most common year of birth (only available for NYC and Chi
 
 ### Files used
 bikeshare.py
-### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
 
+### Credits
+
+The data for all 3 cities that is used in this project can be accessed through the link mentioned below :
+
+https://drive.google.com/file/d/1km4EggJaSvHos_7KKFuHoJxbh-StyM4G/view?usp=sharing 
